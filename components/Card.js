@@ -1,4 +1,4 @@
-import { popupElement, popupCloseButton, popupImage } from "../utils/constants.js"
+import { popupImage, popupElement, popupCloseButton } from "../utils/constants.js";
 
 export default class Card {
   constructor(cardSelector) {

@@ -1,4 +1,4 @@
-const items = [
+export const items = [
   {
     image: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/oop/moved_card_detail.jpg",
     title: "BIOLOID",
@@ -8,7 +8,7 @@ const items = [
   {
     image: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/oop/moved_card_detail.jpg",
     title: "BIOLOID Premium kit",
-    description: "BIOLOID Premium Kit tiene todo lo necesario para construir robots bípedos e incluye el servomotor Dynamixel Smart y el controlador CM-530. BIOLOID Premium Kit es perfecto para la educación, el entretenimiento y las competiciones de robótica",
+    description: "BIOLOID Premium Kit tiene todo lo necesario para construir robots bípedos e incluye el servomotor Dynamixel Smart y el controlador CM-530. BIOLOID Premium Kit es perfecto para la educación, el entretenimiento y las competiciones de robótica.",
     price: "$1800"
   },
   {
@@ -18,12 +18,25 @@ const items = [
     price: "$2000"
   },
 ];
-const cardList = document.querySelector(".card-list__items");
-const popupElement = document.querySelector(".popup");
-const popupCloseButton = document.querySelector(".popup__close");
-const popupImage = document.querySelector(".popup__image");
-const popupCaption = document.querySelector(".popup__caption");
-const defaultCardButton = document.querySelector(".filter__button_type_grid");
-const horizontalCardButton = document.querySelector(".filter__button_type_column");
 
-export { items, cardList, popupElement, popupCloseButton, popupImage, popupCaption, defaultCardButton, horizontalCardButton }
+export const filterButtons = [
+  {
+    buttonClass: "filter__button_type_grid",
+    isGrid: true
+  },
+  {
+    buttonClass: "filter__button_type_column",
+    isGrid: false
+  }
+];
+
+export const cardListSelector = ".card-list__items";
+export const filterListSelector = ".filter";
+export const filterButtonTemplate = ".filter-button";
+export const cardList = document.querySelector(".card-list__items");
+export const popupElement = document.querySelector(".popup");
+export const popupCloseButton = document.querySelector(".popup__close");
+export const popupImage = document.querySelector(".popup__image");
+export const popupCaption = document.querySelector(".popup__caption");
+export const defaultCardButton = document.querySelector(".filter__button_type_grid");
+export const horizontalCardButton = document.querySelector(".filter__button_type_column");

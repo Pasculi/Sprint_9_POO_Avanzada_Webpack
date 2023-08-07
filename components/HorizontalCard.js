@@ -1,4 +1,5 @@
 import Card from "./Card.js";
+
 export default class HorizontalCard extends Card {
   constructor(data, cardSelector) {
     super(cardSelector);
