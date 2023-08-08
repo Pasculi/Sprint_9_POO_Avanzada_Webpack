@@ -1,6 +1,8 @@
 import Section from "../components/Section.js";
 import DefaultCard from "../components/DefaultCard.js";
 import HorizontalCard from "../components/HorizontalCard.js";
+import { filterButtons, filterListSelector } from "../utils/constants.js";
+import FilterButton from "../components/FilterButton.js";
 import {
   defaultCardButton,
   horizontalCardButton,
@@ -25,6 +27,15 @@ const horizontalCardList = new Section({
     horizontalCardList.setItem(cardElement);
   }
 }, cardListSelector);
+
+const filterList = new Section({
+  data: filterButtons, renderer: () => {
+    const filterButton = new FilterButton();
+
+  }
+},
+  filterListSelector
+);
 
 defaultCardButton.addEventListener("click", () => {
   defaultCardList.renderItems();
